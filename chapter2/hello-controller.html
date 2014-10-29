@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="notesApp">
+  <head>
+    <title>Angular.js Hello Controller creation</title>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl as Ctrl">
+      <h2>Angular.js Hello Controller Example</h2>
+      {{ Ctrl.helloMsg }} Angular.js <br />
+      {{ Ctrl.goodByeMsg }} Angular.js
+    </div>
+    <script src="../js/angular.js"></script>
+    <script>
+      angular.module('notesApp', [])
+      .controller('MainCtrl', function(){
+         console.log("from main controller function");
+         this.helloMsg = "Hello "
+         var goodByeMsg = "Good Bye "
+      });
+    </script>
+  </body>
+</html>
