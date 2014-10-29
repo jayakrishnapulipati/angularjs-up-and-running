@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html ng-app="notesApp">
+  <head>
+    <title>Angular.js controller creation</title>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl">
+       <h2>Angular.js Controller Example</h2>
+    </div>
+    <script src="../js/angular.js"></script>
+    <script>
+      angular.module('notesApp', [])
+      .controller('MainCtrl', function(){
+         console.log("from main controller function");
+      });
+    </script>
+  </body>
+</html>
