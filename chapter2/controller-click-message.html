@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html ng-app="notesApp">
+  <head>
+    <title>Angular.js Hello Controller creation</title>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl as Ctrl">
+      <h2>Angular.js Controller Click Message Example</h2>
+      {{ Ctrl.message }}
+      <button ng-click="Ctrl.changeMsg()">Change</button>
+    </div>
+    <script src="../js/angular.js"></script>
+    <script>
+      angular.module('notesApp', [])
+      .controller('MainCtrl', function(){
+         console.log("from main controller function");
+         var self = this;
+         self.message = "Hello Angular.js";
+         self.changeMsg = function() {
+           console.log("from click event");
+           self.message = "Bye Angular.js";
+         };
+      });
+    </script>
+  </body>
+</html>
